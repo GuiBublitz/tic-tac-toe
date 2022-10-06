@@ -40,22 +40,22 @@ export class BoardController {
         let validator = false;
         if ( player == 1 ) {
             this._combinations.forEach((arrCombPossibility)=>{
-                let contador = 0;
+                let count = 0;
                 arrCombPossibility.forEach((comb)=>{
                     if ( this._user1Data.includes(comb) ) { 
-                        ++contador;
+                        ++count;
                     }
-                    if (arrCombPossibility.length === contador) validator = true;
+                    if (arrCombPossibility.length === count) validator = true;
                 })
             })
         } else {
             this._combinations.forEach((arrCombPossibility)=>{
-                let contador = 0;
+                let count = 0;
                 arrCombPossibility.forEach((comb)=>{
                     if ( this._user2Data.includes(comb) ) { 
-                        ++contador;
+                        ++count;
                     }
-                    if (arrCombPossibility.length === contador) validator = true;
+                    if (arrCombPossibility.length === count) validator = true;
                 })
             })
         }
